@@ -1,0 +1,5 @@
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.Library\bin\Debug\AutonomousCars.Library.dll
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.Library\bin\Debug\AutonomousCars.Library.pdb
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.Library\obj\Debug\AutonomousCars.Library.csprojResolveAssemblyReference.cache
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.Library\obj\Debug\AutonomousCars.Library.dll
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.Library\obj\Debug\AutonomousCars.Library.pdb

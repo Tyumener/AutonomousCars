@@ -1,0 +1,7 @@
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.WpfLibrary\bin\Debug\AutonomousCars.WpfLibrary.dll
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.WpfLibrary\bin\Debug\AutonomousCars.WpfLibrary.pdb
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.WpfLibrary\bin\Debug\AutonomousCars.Library.dll
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.WpfLibrary\bin\Debug\AutonomousCars.Library.pdb
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.WpfLibrary\obj\Debug\AutonomousCars.WpfLibrary.csprojResolveAssemblyReference.cache
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.WpfLibrary\obj\Debug\AutonomousCars.WpfLibrary.dll
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars.WpfLibrary\obj\Debug\AutonomousCars.WpfLibrary.pdb
