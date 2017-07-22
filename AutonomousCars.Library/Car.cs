@@ -11,12 +11,12 @@ namespace AutonomousCars.Library
         /// <summary>
         /// How often are the values recalculated. 1 second here to be consistent with the other units of measurement
         /// </summary>
-        private int delay = 1000;
+        private int delay = 10;
 
         /// <summary>
         /// Position
         /// </summary>
-        public virtual int Position { get; set; }
+        public virtual float Position { get; set; }
 
         /// <summary>
         /// Lane number, where 1 is the right lane and greater values - lanes to the left
@@ -26,27 +26,27 @@ namespace AutonomousCars.Library
         /// <summary>
         /// Acceleration speed in meters per second
         /// </summary>
-        public int Acceleration { get; private set; }
+        public float Acceleration { get; private set; }
 
         /// <summary>
         /// Breaking speed in meters per socond
         /// </summary>
-        public int Braking { get; private set; }
+        public float Braking { get; private set; }
 
         /// <summary>
         /// Maximum speed in meters per second
         /// </summary>
-        public int MaxSpeed { get; private set; }
+        public float MaxSpeed { get; private set; }
 
         /// <summary>
         /// Current speed in meters per second
         /// </summary>
-        public virtual int Speed { get; set; }
+        public virtual float Speed { get; set; }
 
         /// <summary>
         /// Desired speed in meters per second
         /// </summary>
-        public int DesiredSpeed { get; set; }
+        public float DesiredSpeed { get; set; }
 
         /// <summary>
         /// 0 to 100%
@@ -68,7 +68,7 @@ namespace AutonomousCars.Library
         /// <param name="acceleration"></param>
         /// <param name="breaking"></param>
         /// <param name="maxSpeed"></param>
-        public Car(int acceleration, int breaking, int maxSpeed)
+        public Car(float acceleration, float breaking, float maxSpeed)
         {
             this.Acceleration = acceleration;
             this.Braking = breaking;

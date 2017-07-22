@@ -16,7 +16,7 @@ namespace AutonomousCars
             {
                 Left = 700 - (int)values[0] * 45,
                 Right = 0,
-                Top = 500 - (int)values[1],
+                Top = 500 - (float)values[1],
                 Bottom = 0
             };
 

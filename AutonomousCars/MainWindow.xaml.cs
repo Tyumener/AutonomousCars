@@ -37,15 +37,15 @@ namespace AutonomousCars
 
             this.DataContext = car;
 
-            var slowCar = new ObservableCar(2, 4, 15);
+            var slowCar = new ObservableCar(0.02f, 0.04f, 0.015f);
             slowCar.Lane = 1;
             slowCar.GasIntensity = 100;
 
-            var fastCar = new ObservableCar(4, 5, 20);
+            var fastCar = new ObservableCar(0.04f, 0.05f, 0.02f);
             fastCar.Lane = 2;
             fastCar.GasIntensity = 100;
 
-            var muscleCar = new ObservableCar(6, 6, 25);
+            var muscleCar = new ObservableCar(0.06f, 0.06f, 0.012f);
             muscleCar.Lane = 3;
             muscleCar.GasIntensity = 100;
 

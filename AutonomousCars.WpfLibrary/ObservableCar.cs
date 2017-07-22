@@ -14,13 +14,13 @@ namespace AutonomousCars.WpfLibrary
         {
         }
 
-        public ObservableCar(int acceleration, int breaking, int maxSpeed) : base(acceleration, breaking, maxSpeed)
+        public ObservableCar(float acceleration, float breaking, float maxSpeed) : base(acceleration, breaking, maxSpeed)
         {
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public override int Speed
+        public override float Speed
         {
             get
             {
@@ -33,7 +33,7 @@ namespace AutonomousCars.WpfLibrary
             }
         }
 
-        public override int Position
+        public override float Position
         {
             get
             {
