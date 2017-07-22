@@ -58,6 +58,10 @@ namespace AutonomousCars.Library
         /// </summary>
         public int BrakeIntensity { get; set; }
 
+        public Car()
+        {
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Car"/> class
         /// </summary>
