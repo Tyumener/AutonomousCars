@@ -89,7 +89,15 @@ namespace AutonomousCars.Library
         private async Task ChangeSpeed()
         {
             var speedChange = (this.Acceleration * this.GasIntensity / 100) - (this.Braking * this.BrakeIntensity / 100);
-            this.Speed += speedChange;            
-        }
+            if (this.Speed + speedChange < this.MaxSpeed)
+            {
+                this.Speed += speedChange;
+            }
+            else
+            {
+                this.Speed = this.MaxSpeed;
+            }
+
+            }
     }
 }
