@@ -3,17 +3,18 @@ using System.Collections.Generic;
 
 namespace AutonomousCars.Library
 {
-    public class Road<T> : List<T> where T: Car 
+    public class Road : List<Car> 
     {
         public event EventHandler<CarAddedEventArgs> CarAdded;
-
+        
         public Road()
         {
             
         }                            
 
-        public new void Add(T car)
+        public new void Add(Car car)
         {
+            car.Road = this;
             base.Add(car);
             OnCarAdded(new CarAddedEventArgs(car));
         }

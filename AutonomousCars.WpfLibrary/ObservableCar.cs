@@ -11,10 +11,16 @@ namespace AutonomousCars.WpfLibrary
     public class ObservableCar : Car, INotifyPropertyChanged
     {
         public ObservableCar() : base()
+        {                
+        }
+
+        public ObservableCar(float acceleration, float breaking, float maxSpeed) :
+            base(acceleration, breaking, maxSpeed)
         {
         }
 
-        public ObservableCar(float acceleration, float breaking, float maxSpeed) : base(acceleration, breaking, maxSpeed)
+        public ObservableCar(float acceleration, float breaking, float maxSpeed, Road road) : 
+            base(acceleration, breaking, maxSpeed, road)
         {
         }
 

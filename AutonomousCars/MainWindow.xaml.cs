@@ -22,45 +22,70 @@ namespace AutonomousCars
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCar car;
-        ObservableCar car2;
-
-        Road<ObservableCar> road = new Road<ObservableCar>();
+        Road road = new Road();
 
         public MainWindow()
         {
-            this.car = new ObservableCar(4, 1, 120);
-            this.car.GasIntensity = 50;
-            this.car.BrakeIntensity = 0;
-
             InitializeComponent();
 
-            this.DataContext = car;
-
-            var slowCar = new ObservableCar(0.02f, 0.04f, 0.5f);
-            slowCar.Lane = 1;
-            slowCar.GasIntensity = 100;
-
-            var fastCar = new ObservableCar(0.03f, 0.05f, 2.0f);
-            fastCar.Lane = 2;
-            fastCar.GasIntensity = 100;
-
-            var muscleCar = new ObservableCar(0.07f, 0.06f, 1.5f);
-            muscleCar.Lane = 3;
-            muscleCar.GasIntensity = 100;
-
-            this.road.Add(slowCar);
-            this.road.Add(fastCar);
-            this.road.Add(muscleCar);            
-
-            this.road.ForEach(c => { MyGrid.Children.Add(new Car(c)); });
+            //this.road.ForEach(c => { MyGrid.Children.Add(new Car((ObservableCar)c)); });
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //this.car.Drive();
-            //this.car2.Drive();
-            this.road.ForEach(c => c.Drive());
+            AddCar(0.02f, 1.2f, 1);            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.04f, 1.8f, 1);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.08f, 2.2f, 1);            
+        }
+
+        private void AddCar(float acceleration, float maxSpeed, int lane)
+        {
+            var car = new ObservableCar(acceleration, 0.06f, maxSpeed);
+            car.Lane = lane;
+            car.GasIntensity = 100;
+            this.road.Add(car);
+
+            MyGrid.Children.Add(new Car((ObservableCar)car));
+
+            car.Drive();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.02f, 1.2f, 2);
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.04f, 1.8f, 2);
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.08f, 2.2f, 2);
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.02f, 1.2f, 3);
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.04f, 1.8f, 3);
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            AddCar(0.08f, 2.2f, 3);
         }
     }
 }
