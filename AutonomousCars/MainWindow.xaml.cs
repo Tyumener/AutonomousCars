@@ -28,6 +28,7 @@ namespace AutonomousCars
         {
             InitializeComponent();
 
+            this.road.Drive();
             //this.road.ForEach(c => { MyGrid.Children.Add(new Car((ObservableCar)c)); });
         }
 
@@ -55,7 +56,7 @@ namespace AutonomousCars
 
             MyGrid.Children.Add(new Car((ObservableCar)car));
 
-            car.Drive();
+            //car.Drive();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
