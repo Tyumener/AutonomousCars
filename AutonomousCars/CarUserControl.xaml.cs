@@ -19,13 +19,13 @@ namespace AutonomousCars
     /// <summary>
     /// Interaktionslogik für Car.xaml
     /// </summary>
-    public partial class Car : UserControl
+    public partial class CarUserControl : UserControl
     {
         private Random r = new Random();
 
         public ObservableCar CarObject { get; set; } = new ObservableCar();
 
-        public Car(ObservableCar car)
+        public CarUserControl(ObservableCar car)
         {
             InitializeComponent();
 

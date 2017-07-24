@@ -17,5 +17,5 @@ c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\o
 c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\AutonomousCars.exe
 c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\AutonomousCars.pdb
 c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\GeneratedInternalTypeHelper.g.cs
-c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\Car.g.cs
-c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\Car.baml
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\CarUserControl.g.cs
+c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\CarUserControl.baml

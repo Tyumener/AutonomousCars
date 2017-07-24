@@ -54,9 +54,7 @@ namespace AutonomousCars
             car.GasIntensity = 100;
             this.road.Add(car);
 
-            MyGrid.Children.Add(new Car((ObservableCar)car));
-
-            //car.Drive();
+            MyGrid.Children.Add(new CarUserControl((ObservableCar)car));            
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

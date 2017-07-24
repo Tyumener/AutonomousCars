@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\App.xaml
-2-2037702307
+2-2102026780
 
-11-788569680
+11-979161469
 15-1909801680
-Car.xaml;MainWindow.xaml;
+CarUserControl.xaml;MainWindow.xaml;
 
-False
+True
 
