@@ -1,26 +1,12 @@
-﻿using AutonomousCars.Library;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutonomousCars.WpfLibrary
+﻿namespace AutonomousCars.WpfLibrary
 {
+    using System.ComponentModel;
+    using AutonomousCars.Library;
+    using AutonomousCars.Library.Cars;
+
     public class ObservableCar : Car, INotifyPropertyChanged
     {
-        public ObservableCar() : base()
-        {                
-        }
-
-        public ObservableCar(float acceleration, float breaking, float maxSpeed) :
-            base(acceleration, breaking, maxSpeed)
-        {
-        }
-
-        public ObservableCar(float acceleration, float breaking, float maxSpeed, Road road) : 
-            base(acceleration, breaking, maxSpeed, road)
+        public ObservableCar(float acceleration, float braking, float maxSpeed, Road road) : base(acceleration, braking, maxSpeed, road)
         {
         }
 
@@ -49,6 +35,19 @@ namespace AutonomousCars.WpfLibrary
             {
                 base.Position = value;
                 OnPropertyChanged("Position");
+            }
+        }
+
+        public override int Lane
+        {
+            get
+            {
+                return base.Lane;
+            }
+            set
+            {
+                base.Lane = value;
+                OnPropertyChanged("Lane");
             }
         }
 

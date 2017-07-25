@@ -23,18 +23,17 @@ namespace AutonomousCars
     {
         private Random r = new Random();
 
-        public ObservableCar CarObject { get; set; } = new ObservableCar();
+        public ObservablePassengerCar Car { get; set; }
 
-        public CarUserControl(ObservableCar car)
+        public CarUserControl(ObservablePassengerCar car)
         {
             InitializeComponent();
 
             this.MyRect.Fill = new SolidColorBrush(Color.FromRgb((byte)r.Next(1, 255),
               (byte)r.Next(1, 255), (byte)r.Next(1, 233)));
 
-
-            this.CarObject = car;
-            this.DataContext = this.CarObject;
+            this.Car = car;
+            this.DataContext = this.Car;
 
             System.Threading.Thread.Sleep(100);
         }        

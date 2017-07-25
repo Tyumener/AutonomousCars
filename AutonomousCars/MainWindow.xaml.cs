@@ -1,22 +1,9 @@
-﻿using AutonomousCars.Library;
-using AutonomousCars.WpfLibrary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace AutonomousCars
+﻿namespace AutonomousCars
 {
+    using AutonomousCars.Library;
+    using AutonomousCars.WpfLibrary;
+    using System.Windows;
+
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
@@ -29,62 +16,96 @@ namespace AutonomousCars
             InitializeComponent();
 
             this.road.Drive();
-            //this.road.ForEach(c => { MyGrid.Children.Add(new Car((ObservableCar)c)); });
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SlowCarLane1_Click(object sender, RoutedEventArgs e)
         {
             AddCar(0.02f, 1.2f, 1);            
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void FastCarLane1_Click(object sender, RoutedEventArgs e)
         {
-            AddCar(0.04f, 1.8f, 1);
+            AddCar(0.08f, 2.2f, 1);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void SlowTruckLane1_Click(object sender, RoutedEventArgs e)
         {
-            AddCar(0.08f, 2.2f, 1);            
+            AddTruck(0.01f, 1.0f, 1);
         }
 
-        private void AddCar(float acceleration, float maxSpeed, int lane)
+        private void FastTruckLane1_Click(object sender, RoutedEventArgs e)
         {
-            var car = new ObservableCar(acceleration, 0.06f, maxSpeed);
-            car.Lane = lane;
-            car.GasIntensity = 100;
-            this.road.Add(car);
-
-            MyGrid.Children.Add(new CarUserControl((ObservableCar)car));            
+            AddTruck(0.05f, 1.9f, 1);
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void SlowCarLane2_Click(object sender, RoutedEventArgs e)
         {
             AddCar(0.02f, 1.2f, 2);
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            AddCar(0.04f, 1.8f, 2);
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void FastCarLane2_Click(object sender, RoutedEventArgs e)
         {
             AddCar(0.08f, 2.2f, 2);
         }
 
-        private void Button_Click_6(object sender, RoutedEventArgs e)
+        private void SlowTruckLane2_Click(object sender, RoutedEventArgs e)
+        {
+            AddTruck(0.01f, 1.0f, 2);
+        }
+
+        private void FastTruckLane2_Click(object sender, RoutedEventArgs e)
+        {
+            AddTruck(0.05f, 1.9f, 2);
+        }
+
+        private void SlowCarLane3_Click(object sender, RoutedEventArgs e)
         {
             AddCar(0.02f, 1.2f, 3);
         }
 
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-            AddCar(0.04f, 1.8f, 3);
-        }
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
+        private void FastCarLane3_Click(object sender, RoutedEventArgs e)
         {
             AddCar(0.08f, 2.2f, 3);
+        }
+
+        private void SlowTruckLane3_Click(object sender, RoutedEventArgs e)
+        {
+            AddTruck(0.01f, 1.0f, 3);
+        }
+
+        private void FastTruckLane3_Click(object sender, RoutedEventArgs e)
+        {
+            AddTruck(0.05f, 1.9f, 3);
+        }
+
+        private void AddCar(float acceleration, float maxSpeed, int lane)
+        {
+            ObservablePassengerCar car = new ObservablePassengerCar(acceleration, 0.06f, maxSpeed, road);
+            car.Lane = lane;
+            car.GasIntensity = 100;
+            this.road.Add(car);
+
+            MyGrid.Children.Add(new CarUserControl(car));
+        }
+
+        private void AddTruck(float acceleration, float maxSpeed, int lane)
+        {
+            ObservableTruck truck = new ObservableTruck(acceleration, 0.06f, maxSpeed, road);
+            truck.Lane = lane;
+            truck.GasIntensity = 100;
+            this.road.Add(truck);
+
+            MyGrid.Children.Add(new TruckUserControl(truck));
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            this.road.RoadType = RoadType.Autobahn;
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            this.road.RoadType = RoadType.City;
         }
     }
 }

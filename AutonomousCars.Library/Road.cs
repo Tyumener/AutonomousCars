@@ -1,30 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace AutonomousCars.Library
+﻿namespace AutonomousCars.Library
 {
-    public class Road : List<Car> 
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using AutonomousCars.Library.Cars;
+
+    public class Road : List<Car>
     {
-        public event EventHandler<CarAddedEventArgs> CarAdded;
-        
+        /// <summary>
+        /// How often are the values recalculated. 1 second here to be consistent with the other units of measurement
+        /// </summary>
+        private int delay = 10;
+
+        public float MaxPosition { get; set; } = 1000;
+
+        public int MaxLanes { get; set; } = 3;
+
+        public RoadType RoadType { get; set; }
+
         public Road()
         {
-            
-        }                            
-
-        public new void Add(Car car)
-        {
-            car.Road = this;
-            base.Add(car);
-            OnCarAdded(new CarAddedEventArgs(car));
+            this.RoadType = RoadType.Autobahn;
         }
 
-        protected virtual void OnCarAdded(CarAddedEventArgs e)
+        public async void Drive()
         {
-            var handler = CarAdded;
-            if (handler != null)
+            while (true)
             {
-                handler(this, e);
+                var carsToRemove = new List<Car>();
+                this.ForEach(car => car.Move());
+                this.RemoveAll(c => c.Position >= this.MaxPosition);
+                await Task.Delay(this.delay);
             }
         }
     }

@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutonomousCars.Library</name>
+    </assembly>
+    <members>
+        <member name="T:AutonomousCars.Library.Cars.Car">
+            <summary>
+            Class that represents an autonomous car
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.position">
+            <summary>
+            Position of the car
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.lane">
+            <summary>
+            Lane of the road the car uses
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.acceleration">
+            <summary>
+            The ability of the car to gain speed. Measured in pixels per iteration
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.braking">
+            <summary>
+            The ability of the car to brake. Measured in pixels per iteration
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.maxSpeed">
+            <summary>
+            Maximum speed of the car
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.speed">
+            <summary>
+            Speed of the car
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.desiredSpeed">
+            <summary>
+            Desired speed of the car
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.gasIntensity">
+            <summary>
+            Representation of the gas pedal
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.brakeIntensity">
+            <summary>
+            Representation of the brake pedal
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.laneWasChanged">
+            <summary>
+            A flag indicating that the line was changed on the current iteration
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.prevDistance">
+            <summary>
+            Distance to the front car on the previous iteration
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Cars.Car.#ctor(System.Single,System.Single,System.Single,AutonomousCars.Library.Road)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Cars.Car"/> class
+            </summary>
+            <param name="acceleration">The ability of the car to gain speed. Measured in pixels per iteration</param>
+            <param name="braking">The ability of the car to brake. Measured in pixels per iteration</param>
+            <param name="maxSpeed">Maximum speed of the car</param>
+            <param name="road">The road object, that is aware of all the other cars</param>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.Road">
+            <summary>
+            Gets or sets the road object, that is aware of all the other cars
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.Position">
+            <summary>
+            Gets or sets the car's position. Measured in points
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.Lane">
+            <summary>
+            Gets or sets the lane number, where 1 is the right lane and greater values - lanes to the left
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.Acceleration">
+            <summary>
+            Gets the car's ability to accelerate. The ability of the car to gain speed. Measured in pixels per iteration
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.Braking">
+            <summary>
+            Gets the car's ability to brake. Measured in pixels per iteration
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.MaxSpeed">
+            <summary>
+            Gets the car's maximum speed. Measured in pixels per iteration
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.Speed">
+            <summary>
+            Gets or sets the car's speed. Measured in pixels per iteration
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.DesiredSpeed">
+            <summary>
+            Gets or sets the car's desired speed. Measured in pixels per iteration
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.GasIntensity">
+            <summary>
+            Gets or sets the position of the car's gas pedal. Measured in % from 0 to 100
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.BrakeIntensity">
+            <summary>
+            Gets or sets the position of the car's brake pedal. Measured in % from 0 to 100
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.SafeDistance">
+            <summary>
+            Distance between cars that is considered to be safe
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Cars.Car.CompareTo(AutonomousCars.Library.Cars.Car)">
+            <summary>
+            Compare cars
+            </summary>
+            <param name="that">That car</param>
+            <returns>An integer indicating whether an object is less, greater or equal to the given object</returns>
+        </member>
+        <member name="M:AutonomousCars.Library.Cars.Car.Move">
+            <summary>
+            Move through the iteration
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Road.delay">
+            <summary>
+            How often are the values recalculated. 1 second here to be consistent with the other units of measurement
+            </summary>
+        </member>
+    </members>
+</doc>

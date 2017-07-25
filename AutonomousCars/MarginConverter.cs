@@ -12,6 +12,8 @@ namespace AutonomousCars
     {
         public object Convert(object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
+            if (values[0] == null || values[1] == null) return null;
+
             var margin = new Thickness
             {
                 Left = 700 - (int)values[0] * 45,

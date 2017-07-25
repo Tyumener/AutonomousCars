@@ -10,18 +10,21 @@
         <local:MarginConverter x:Key="MarginConverter"></local:MarginConverter>
     </Window.Resources>
     <Grid x:Name="MyGrid">
-        <TextBlock HorizontalAlignment="Left" Margin="110,55,0,0" TextWrapping="Wrap" Text="{Binding Speed}" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="110,238,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="110,168,0,0" TextWrapping="Wrap" Text="{Binding GasIntensity}" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="110,209,0,0" TextWrapping="Wrap" Text="{Binding BrakeIntensity}" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="344,168,0,0" TextWrapping="Wrap" Text="{Binding Position}" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="110,265,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="110,292,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="190,238,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="190,265,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="190,292,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_5"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="270,238,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_6"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="270,265,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_7"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="270,292,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_8"/>
+        <Button Content="Slow car" HorizontalAlignment="Left" Margin="215,82,0,0" VerticalAlignment="Top" Width="75" Click="SlowCarLane1_Click"/>
+        <Button Content="Fast car" HorizontalAlignment="Left" Margin="215,106,0,0" VerticalAlignment="Top" Width="75" Click="FastCarLane1_Click"/>
+        <Button Content="Slow truck" HorizontalAlignment="Left" Margin="215,131,0,0" VerticalAlignment="Top" Width="75" Click="SlowTruckLane1_Click"/>
+        <Button Content="Fast truck" HorizontalAlignment="Left" Margin="215,156,0,0" VerticalAlignment="Top" Width="75" Click="FastTruckLane1_Click"/>
+        <Button Content="Slow car" HorizontalAlignment="Left" Margin="135,82,0,0" VerticalAlignment="Top" Width="75" Click="SlowCarLane2_Click"/>
+        <Button Content="Fast car" HorizontalAlignment="Left" Margin="135,107,0,0" VerticalAlignment="Top" Width="75" Click="FastCarLane2_Click"/>
+        <Button Content="Slow truck" HorizontalAlignment="Left" Margin="135,131,0,0" VerticalAlignment="Top" Width="75" Click="SlowTruckLane2_Click"/>
+        <Button Content="Fast truck" HorizontalAlignment="Left" Margin="135,156,0,0" VerticalAlignment="Top" Width="75" Click="FastTruckLane2_Click"/>
+        <Button Content="Slow car" HorizontalAlignment="Left" Margin="55,82,0,0" VerticalAlignment="Top" Width="75" Click="SlowCarLane3_Click"/>
+        <Button Content="Fast car" HorizontalAlignment="Left" Margin="55,106,0,0" VerticalAlignment="Top" Width="75" Click="FastCarLane3_Click"/>
+        <Button Content="Slow truck" HorizontalAlignment="Left" Margin="55,131,0,0" VerticalAlignment="Top" Width="75" Click="SlowTruckLane3_Click"/>
+        <Button Content="Fast truck" HorizontalAlignment="Left" Margin="55,156,0,0" VerticalAlignment="Top" Width="75" Click="FastTruckLane3_Click"/>
+        <Label Content="Lane 3" HorizontalAlignment="Left" Margin="73,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Lane 2" HorizontalAlignment="Left" Margin="154,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Lane 1" HorizontalAlignment="Left" Margin="232,51,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Autobahn" HorizontalAlignment="Left" Margin="58,218,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True"/>
     </Grid>
 </Window>

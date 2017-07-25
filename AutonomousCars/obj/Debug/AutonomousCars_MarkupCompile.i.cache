@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\obj\Debug\
+C:\Users\user reflekt\git\AutonomousCars\AutonomousCars\obj\Debug\
 AutonomousCars
 none
 false
 DEBUG;TRACE
-c:\users\a\documents\visual studio 2017\Projects\AutonomousCars\AutonomousCars\App.xaml
-2-2102026780
+C:\Users\user reflekt\git\AutonomousCars\AutonomousCars\App.xaml
+3-1413808534
 
-11-979161469
-15-1909801680
-CarUserControl.xaml;MainWindow.xaml;
+12173131599
+15-980063324
+CarUserControl.xaml;MainWindow.xaml;TruckUserControl.xaml;
 
-True
+False
 

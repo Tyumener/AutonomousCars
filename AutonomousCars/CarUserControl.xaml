@@ -10,7 +10,7 @@
         <local:MarginConverter x:Key="MarginConverter"></local:MarginConverter>
     </UserControl.Resources>
     <Grid>
-        <Rectangle x:Name="MyRect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40">
+        <Rectangle x:Name="MyRect" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="{Binding Length}" Stroke="Black" VerticalAlignment="Top" Width="40">
             <Rectangle.Margin>
                 <MultiBinding Converter="{StaticResource MarginConverter}">
                     <Binding Path="Lane" />
