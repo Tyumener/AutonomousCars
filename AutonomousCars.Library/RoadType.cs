@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutonomousCars.Library
+﻿namespace AutonomousCars.Library
 {
+    /// <summary>
+    /// Enumeration for the road types
+    /// </summary>
     public enum RoadType
     {
         Autobahn,

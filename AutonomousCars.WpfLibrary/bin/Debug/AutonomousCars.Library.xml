@@ -6,7 +6,7 @@
     <members>
         <member name="T:AutonomousCars.Library.Cars.Car">
             <summary>
-            Class that represents an autonomous car
+            Abstract class that represents an autonomous car
             </summary>
         </member>
         <member name="F:AutonomousCars.Library.Cars.Car.position">
@@ -62,6 +62,21 @@
         <member name="F:AutonomousCars.Library.Cars.Car.prevDistance">
             <summary>
             Distance to the front car on the previous iteration
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.frontSonar">
+            <summary>
+            Front sonar
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.leftSonar">
+            <summary>
+            Left sonar
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Cars.Car.rightSonar">
+            <summary>
+            Right sonar
             </summary>
         </member>
         <member name="M:AutonomousCars.Library.Cars.Car.#ctor(System.Single,System.Single,System.Single,AutonomousCars.Library.Road)">
@@ -125,7 +140,17 @@
         </member>
         <member name="P:AutonomousCars.Library.Cars.Car.SafeDistance">
             <summary>
-            Distance between cars that is considered to be safe
+            Gets the distance between cars that is considered to be safe
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.Length">
+            <summary>
+            Gets the car's length
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Car.CanOvertake">
+            <summary>
+            Gets a value indicating whether the car can overtake other cars
             </summary>
         </member>
         <member name="M:AutonomousCars.Library.Cars.Car.CompareTo(AutonomousCars.Library.Cars.Car)">
@@ -140,9 +165,167 @@
             Move through the iteration
             </summary>
         </member>
+        <member name="T:AutonomousCars.Library.Cars.PassengerCar">
+            <summary>
+            Class that represents a passenger autonomous car
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Cars.PassengerCar.#ctor(System.Single,System.Single,System.Single,AutonomousCars.Library.Road)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Cars.PassengerCar"/> class
+            </summary>
+            <param name="acceleration">The ability of the car to gain speed. Measured in pixels per iteration</param>
+            <param name="braking">The ability of the car to brake. Measured in pixels per iteration</param>
+            <param name="maxSpeed">Maximum speed of the car</param>
+            <param name="road">The road object, that is aware of all the other cars</param>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.PassengerCar.CanOvertake">
+            <summary>
+            Gets a value indicating whether the car can overtake other cars
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.PassengerCar.Length">
+            <summary>
+            Gets the car's length
+            </summary>
+        </member>
+        <member name="T:AutonomousCars.Library.Cars.Truck">
+            <summary>
+            Class that represents a truck
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Cars.Truck.#ctor(System.Single,System.Single,System.Single,AutonomousCars.Library.Road)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Cars.Truck"/> class
+            </summary>
+            <param name="acceleration">The ability of the car to gain speed. Measured in pixels per iteration</param>
+            <param name="braking">The ability of the car to brake. Measured in pixels per iteration</param>
+            <param name="maxSpeed">Maximum speed of the car</param>
+            <param name="road">The road object, that is aware of all the other cars</param>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Truck.CanOvertake">
+            <summary>
+            Gets a value indicating whether the car can overtake other cars
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Cars.Truck.Length">
+            <summary>
+            Gets the car's length
+            </summary>
+        </member>
+        <member name="T:AutonomousCars.Library.RoadType">
+            <summary>
+            Enumeration for the road types
+            </summary>
+        </member>
+        <member name="T:AutonomousCars.Library.Sonars.FrontSonar">
+            <summary>
+            Class that represents a front sonar
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Sonars.FrontSonar.#ctor(AutonomousCars.Library.Cars.Car)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Sonars.FrontSonar"/> class
+            </summary>
+            <param name="car">Car object</param>
+        </member>
+        <member name="P:AutonomousCars.Library.Sonars.FrontSonar.Predicate">
+            <summary>
+            Gets a predicate used to filter other cars
+            </summary>
+        </member>
+        <member name="T:AutonomousCars.Library.Sonars.LeftSonar">
+            <summary>
+            Class that represents a left sonar
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Sonars.LeftSonar.#ctor(AutonomousCars.Library.Cars.Car)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Sonars.LeftSonar"/> class
+            </summary>
+            <param name="car">Car object</param>
+        </member>
+        <member name="P:AutonomousCars.Library.Sonars.LeftSonar.Predicate">
+            <summary>
+            Gets a predicate used to filter other cars
+            </summary>
+        </member>
+        <member name="T:AutonomousCars.Library.Sonars.RightSonar">
+            <summary>
+            Class that represents a right sonar
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Sonars.RightSonar.#ctor(AutonomousCars.Library.Cars.Car)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Sonars.RightSonar"/> class
+            </summary>
+            <param name="car">Car object</param>
+        </member>
+        <member name="P:AutonomousCars.Library.Sonars.RightSonar.Predicate">
+            <summary>
+            Gets a predicate used to filter other cars
+            </summary>
+        </member>
+        <member name="T:AutonomousCars.Library.Sonars.Sonar">
+            <summary>
+            Abstract class that represents a sonar
+            </summary>
+        </member>
+        <member name="F:AutonomousCars.Library.Sonars.Sonar.car">
+            <summary>
+            Car object
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Sonars.Sonar.#ctor(AutonomousCars.Library.Cars.Car)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Sonars.Sonar"/> class
+            </summary>
+            <param name="car">car object</param>
+        </member>
+        <member name="P:AutonomousCars.Library.Sonars.Sonar.Predicate">
+            <summary>
+            Gets a predicate used to filter other cars
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Sonars.Sonar.MeasureDistance">
+            <summary>
+            Measure a distance to the car filtered by the predicate
+            </summary>
+            <returns>Distance in pixels</returns>
+        </member>
+        <member name="T:AutonomousCars.Library.Road">
+            <summary>
+            Class that represents a road
+            </summary>
+        </member>
         <member name="F:AutonomousCars.Library.Road.delay">
             <summary>
-            How often are the values recalculated. 1 second here to be consistent with the other units of measurement
+            How often the values are recalculated.
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Road.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutonomousCars.Library.Road"/> class
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Road.MaxPosition">
+            <summary>
+            Gets or sets the maximum position for the road
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Road.MaxLanes">
+            <summary>
+            Gets or sets the maximum number of lines of the road
+            </summary>
+        </member>
+        <member name="P:AutonomousCars.Library.Road.RoadType">
+            <summary>
+            Gets or sets the road type
+            </summary>
+        </member>
+        <member name="M:AutonomousCars.Library.Road.Drive">
+            <summary>
+            Start the usage of the road
             </summary>
         </member>
     </members>

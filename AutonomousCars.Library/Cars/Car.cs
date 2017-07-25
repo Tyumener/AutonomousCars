@@ -4,7 +4,7 @@
     using AutonomousCars.Library.Sonars;
 
     /// <summary>
-    /// Class that represents an autonomous car
+    /// Abstract class that represents an autonomous car
     /// </summary>
     public abstract class Car : IComparable<Car>
     {
@@ -63,22 +63,22 @@
         /// </summary>
         private float prevDistance;
 
+        // TODO: Sonars need to be implemented as properties in order to cover the logic with Unit Tests
+
+        /// <summary>
+        /// Front sonar
+        /// </summary>
         private Sonar frontSonar;
 
+        /// <summary>
+        /// Left sonar
+        /// </summary>
         private Sonar leftSonar;
 
+        /// <summary>
+        /// Right sonar
+        /// </summary>
         private Sonar rightSonar;
-        
-        ///// <summary>
-        ///// Initializes a new instance of the <see cref="Car"/> class
-        ///// </summary>
-        ///// <param name="acceleration">The ability of the car to gain speed. Measured in pixels per iteration</param>
-        ///// <param name="braking">The ability of the car to brake. Measured in pixels per iteration</param>
-        ///// <param name="maxSpeed">Maximum speed of the car</param>
-        //public Car(float acceleration, float braking, float maxSpeed)
-        //    : this(acceleration, braking, maxSpeed, null)
-        //{
-        //}
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Car"/> class
@@ -328,12 +328,18 @@
         }
 
         /// <summary>
-        /// Distance between cars that is considered to be safe
+        /// Gets the distance between cars that is considered to be safe
         /// </summary>
         public int SafeDistance { get; } = 60;
 
+        /// <summary>
+        /// Gets the car's length
+        /// </summary>
         public virtual int Length { get; }
 
+        /// <summary>
+        /// Gets a value indicating whether the car can overtake other cars
+        /// </summary>
         public virtual bool CanOvertake { get; }
 
         /// <summary>
